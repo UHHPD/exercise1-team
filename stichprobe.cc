@@ -13,11 +13,12 @@ int main() {
   double mean=sum/234.0;
 
   std::cout << mean << std::endl;
-
+  fin.close();
+  std::ifstream fin2("datensumme.txt");
   double var=0;
   for(int i=0;i<234;i++) {
     int num1;
-    fin >> num1;
+    fin2 >> num1;
     var+=(num1-mean)*(num1-mean);
     }
   double varnorm=var/234.0;
@@ -25,5 +26,5 @@ int main() {
   
   double sigma = sqrt(varnorm);
   std::cout << sigma << std::endl;
-  fin.close();
+  fin2.close();
 }
