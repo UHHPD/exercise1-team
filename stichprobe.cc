@@ -1,5 +1,6 @@
 #include <fstream>
 #include <iostream>
+#include <cmath>
 
 int main() {
   std::ifstream fin("datensumme.txt");
@@ -22,5 +23,7 @@ int main() {
   double varnorm=var/234.0;
   std::cout << varnorm << std::endl;
   
+  double sigma = sqrt(varnorm);
+  std::cout << sigma << std::endl;
   fin.close();
 }
