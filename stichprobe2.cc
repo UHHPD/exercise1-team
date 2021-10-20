@@ -23,7 +23,7 @@ int main() {
       fin2 >> num1;
       var+=(num1-mean)*(num1-mean);
     }
-    double varnorm=var/9.f;
+    double varnorm=var/8.0;
     fout2 << varnorm << std::endl;
   }
   fin.close();
