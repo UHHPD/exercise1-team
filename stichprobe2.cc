@@ -30,4 +30,27 @@ int main() {
   fin2.close();
   fout.close();
   fout2.close();
+std::ifstream fin3("mittelwerte.txt");
+std::ifstream fin4("varianzen.txt");
+double sum1=0;
+  for(int i=0;i<26;i++) {
+    double num1;
+    fin3 >> num1;
+    sum1+=num1;
+    }
+  double mmean=sum1/26.0;
+
+  std::cout << mmean << std::endl;
+  fin3.close();
+  sum1=0;
+  for(int i=0;i<26;i++) {
+    double num1;
+    fin4 >> num1;
+    sum1+=num1;
+    }
+  double vmean=sum1/26.0;
+
+  std::cout << vmean << std::endl;
+  fin4.close();
 }
+
