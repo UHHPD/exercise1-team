@@ -9,9 +9,18 @@ int main() {
     fin >> num1;
     sum+=num1;
     }
-  double ergebnis=sum/234.0;
+  double mean=sum/234.0;
 
-  std::cout << ergebnis << std::endl;
+  std::cout << mean << std::endl;
+
+  double var=0;
+  for(int i=0;i<234;i++) {
+    int num1;
+    fin >> num1;
+    var+=(num1-mean)*(num1-mean);
+    }
+  double varnorm=var/234.0;
+  std::cout << varnorm << std::endl;
   
   fin.close();
 }
